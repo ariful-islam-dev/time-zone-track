@@ -19,6 +19,14 @@ function App() {
     clock.id = generate();
     setClocks([...clocks, clock ])
   }
+
+  // Update Local Clock
+  const updateLocalClock = (data)=>{
+    setLocalClock({
+      ...localClock,
+      ...data
+    })
+  }
   return (
     <div className="App">
       <div>Local Time</div>
