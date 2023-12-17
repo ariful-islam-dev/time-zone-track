@@ -16,7 +16,11 @@
 - [x] Create React App using this command `yarn create react-app time-zone-track`;
 - [ ] Create To State for `Local Clock` & `Clocks`;
 - [ ] Create Clock Function Like `createClock = () => {}`;
-- [ ] Create Local Clock Update Function Like `updateLocalClock = () => {}`
+- [ ] Create Local Clock Update Function Like `updateLocalClock = () => {}`;
+- [ ] Build Up Local Clock Component
+- [x] Create Share Component is `Clock Display` && `Clock Action`
+- [x] Create Component for Create Clock and Update Clock is `Clock Form `;
 
 ## Third Party Packages
 - [x] shortid
+- [x] date-fns
