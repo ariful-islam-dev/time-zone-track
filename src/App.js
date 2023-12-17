@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { generate } from 'shortid';
+
+const LOCAL_CLOCK_INIT={
+  title: "My Clock",
+  timezone:"",
+  offset: 0,
+  date: null
+}
 
 function App() {
+  const [localClock, setLocalClock] = useState({...LOCAL_CLOCK_INIT});
+  const [clocks, setClocks] = useState([]);
+
+  //Create a clock
+  const createClock = (clock)=>{
+    clock.id = generate();
+    setClocks([...clocks, clock ])
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>Local Time</div>
+      <div>International Clock List</div>
     </div>
   );
 }
