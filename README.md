@@ -24,6 +24,8 @@
 
 - [x] Create `Clock List` Component and Connect the `App.js` File
 - [ ] Create `Clock List Item`Component and Re-render from `Clock List` Component
+  
+- [x] Create `useEvent` Hook for build event in manage time; 
 
 
 ## Third Party Packages
