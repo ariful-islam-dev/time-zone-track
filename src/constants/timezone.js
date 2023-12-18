@@ -1,4 +1,4 @@
-export const TIME_OFFSET = {
+export const TIMEZONE_OFFSET = {
   PST: -7 * 60,
   EST: -4 * 60,
   EDT: -4 * 60,

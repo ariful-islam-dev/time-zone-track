@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useState } from 'react';
 import { generate } from 'shortid';
+import LocalClock from './components/localClock';
 
 const LOCAL_CLOCK_INIT={
   title: "My Clock",
@@ -29,7 +30,7 @@ function App() {
   }
   return (
     <div className="App">
-      <div>Local Time</div>
+      <LocalClock clock={localClock} updateClock={updateLocalClock} createClock={createClock}/>
       <div>International Clock List</div>
     </div>
   );
