@@ -4,10 +4,12 @@ import React from 'react';
 const ClockDisplay = ({date, title, timezone, offset}) => {
 
     const offsetHr = offset/60;
+  
+  
 
     return (
-        <div>
-            <h1>Title: {title}</h1>
+        <div >
+            <h1>{title} Clock</h1>
             <h3>{format(date, "yyyy-MM-dd hh:mm:ss aaaaa'm'")}</h3>
             <p>
                 {timezone}

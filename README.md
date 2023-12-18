@@ -22,6 +22,10 @@
 - [x] Create Component for Create Clock and Update Clock is `Clock Form `;
 - [ ] `Clock Form` Component Working for Create Clock and Update Clock too;
 
+- [x] Create `Clock List` Component and Connect the `App.js` File
+- [ ] Create `Clock List Item`Component and Re-render from `Clock List` Component
+
+
 ## Third Party Packages
 - [x] shortid
 - [x] date-fns

@@ -7,6 +7,7 @@ const ClockForm = ({
   handleClock,
   title = true,
   edit = false,
+  handleToggle
 }) => {
   const [formValues, setFormValues] = useState({ ...values });
   useEffect(() => {
@@ -27,12 +28,13 @@ const ClockForm = ({
   };
   const handleSubmit = (e)=>{
     e.preventDefault();
-    handleClock(formValues)
+    handleClock(formValues);
+    handleToggle();
   }
   return (
-    <div>
+    <div className="clockBox">
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="inputBox">
           <label htmlFor="title">Enter Title</label>
           <input
             type="text"
@@ -44,7 +46,7 @@ const ClockForm = ({
           />
         </div>
         <div>
-          <label htmlFor="timezone">Enter Timezone</label>
+          <label htmlFor="timezone">Enter Timezone</label> 
           <select
             name="timezone"
             id="timezone"
@@ -61,19 +63,21 @@ const ClockForm = ({
           </select>
         </div>
         {
-            formValues.timezone === "GMT" || formValues.timezone === "UTC" && 
-            <div>
+            (formValues.timezone === "GMT" || formValues.timezone === "UTC") && 
+           ( <div>
                 <label htmlFor="offset">Enter Offset</label>
                 <select name="offset" id="offset" value={formValues.offset/60} onChange={handleChange}>
                     {
                         getOffset().map((offset)=> <option key={offset} value={offset}>{offset}</option>)
                     }
                 </select>
-            </div>
+            </div>)
         }
         <button type="submit">{edit ? "Update" : "Create"}</button>
       </form>
+      
     </div>
+
   );
 };
 

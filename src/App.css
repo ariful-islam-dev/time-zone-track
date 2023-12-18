@@ -1,38 +1,144 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.interClock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.clockModal {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  background: green;
+  color: yellow;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px #000;
+}
+.clockModal h3 {
+  font-size: 30px;
+  text-shadow: 1px 1px 2px #000;
+}
+.clockItem {
+  box-shadow: 2px 2px 5px #ddd;
+  border-radius: 5px;
+  background: lightcyan;
   color: white;
+  padding: 10px;
+}
+.clockItem h1 {
+  text-shadow: 1px 1px 2px #000;
+  font-family: tahoma;
 }
 
-.App-link {
-  color: #61dafb;
+.clockItem button {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clockItem h1 {
+  text-shadow: 1px 1px 2px #000;
+  font-family: tahoma;
+}
+
+.clockItem botton {
+  font-size: 20px;
+}
+
+.clockItem button {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #000;
+}
+
+.clockModal h3 {
+  font-size: 25px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+
+.mainClock {
+  width: 300px;
+  background: purple;
+  color: gold;
+  padding: 60px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.mainClock h1 {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px black, 3px 3px 9px pink;
+  font-size: 40px;
+}
+
+.mainClock h3 {
+  color: #3dff3d;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.mainClock p {
+  font-size: 30px;
+  text-shadow: 1px 1px 1px #000;
+  font-family: arial;
+}
+
+.mainClock button {
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: purple;
+}
+
+.clockModal button{
+  background-color: yellow;
+  color: red
+}
+label {
+  font-size:  20px;
+  display: block;
+  text-align: left;
+  margin: 10px 4px;
+}
+
+input, select {
+  display: inline-block;
+  width: 100%;
+  outline: none;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.formContainer {
+  position: relative;
+}
+
+.formContainer > button {
+  position: absolute;
+  right: -16px;
+  top: -35px;
 }
